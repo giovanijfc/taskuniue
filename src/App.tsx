@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function App() {
-  return <div className='App'>Learn React</div>;
+  const [value, setValue] = useState('estado inicial value ');
+
+  return (
+    <div>
+      {value}
+      <button onClick={() => setValue('estado mudado')}>mudar valor</button>
+    </div>
+  );
 }
 
 export default App;
