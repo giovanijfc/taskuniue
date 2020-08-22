@@ -1,7 +1,7 @@
 import React, { useState, useLayoutEffect } from 'react';
 import firebase from 'firebase/app';
 
-import firebaseConfig from './constants/firebaseConfig';
+import firebaseConfig from 'constants/firebaseConfig';
 
 function App() {
   const [value, setValue] = useState('estado inicial value ');
