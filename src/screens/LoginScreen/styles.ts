@@ -25,6 +25,11 @@ export const Container = styled.div`
     line-height: 28px;
     color: black;
     margin-right: 30px;
+
+    :hover {
+      transition: 0.2s;
+      color: #ff4d4d;
+    }
   }
 `;
 
@@ -79,4 +84,10 @@ export const button = styled.button`
   background: rgb(81, 0, 119);
   border-radius: 20px;
   cursor: pointer;
+
+  :hover {
+    cursor: pointer;
+    background: #ffadad;
+    transition: 0.2s;
+  }
 `;
