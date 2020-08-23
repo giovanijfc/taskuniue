@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
+import React, { useLayoutEffect } from 'react';
+import firebase from 'firebase/app';
+
+import firebaseConfig from 'constants/firebaseConfig';
+
+import LoginScreen from './screens/LoginScreen/LoginScreen';
 
 function App() {
-  const [value, setValue] = useState('estado inicial value ');
-
-  return (
-    <div>
-      {value}
-      <button onClick={() => setValue('estado mudado')}>mudar valor</button>
-    </div>
-  );
+  useLayoutEffect(() => {
+    firebase.initializeApp(firebaseConfig);
+  }, []);
+  return <LoginScreen />;
 }
 
 export default App;
