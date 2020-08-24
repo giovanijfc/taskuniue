@@ -24,12 +24,12 @@ const Routes = () => {
     >
       <Router>
         <Switch>
-          <PrivateRoutes path='/' screen={LoginScreen} />
-          <PrivateRoutes path='/login' screen={LoginScreen} />
+          <Route exact path='/login' component={LoginScreen} />
+          <PrivateRoutes path='/tasks' component={LoginScreen} />
+          <PrivateRoutes path='/notifications' component={LoginScreen} />
         </Switch>
       </Router>
     </React.Suspense>
   );
 };
-
 export default Routes;
