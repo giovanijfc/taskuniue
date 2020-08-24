@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import lgbgImg from '../../assets/images/lgbg.jpg';
+import lgbgImg from 'assets/images/lgbg.jpg';
 
 export const Img = styled.img`
   position: absolute;
@@ -24,7 +24,7 @@ export const Container = styled.div`
     font-size: 19px;
     line-height: 28px;
     color: black;
-    margin-right: 30px;
+    margin-left: 70px;
 
     :hover {
       transition: 0.2s;
@@ -35,7 +35,7 @@ export const Container = styled.div`
 
 export const Form = styled.form`
   width: 500px;
-  height: 420px;
+  height: 440px;
   border: 2px solid #000;
   border-radius: 2px 0px 2px 0px;
   color: rgb(0, 0, 0);
@@ -64,14 +64,14 @@ export const Input = styled.input`
   margin-top: 21px;
   padding: 12px 20px;
   box-sizing: border-box;
-  border-radius: 1px solid black;
-  outline: none;
+  border-radius: 1px black;
+  outline: nome;
   height: 40px;
   color: black;
   font-size: 16px;
 `;
 
-export const button = styled.button`
+export const Button = styled.button`
   margin-left: -5px;
   margin-top: 25px;
   box-sizing: border-box;
@@ -84,6 +84,16 @@ export const button = styled.button`
   background: rgb(81, 0, 119);
   border-radius: 20px;
   cursor: pointer;
+
+  :hover {
+    cursor: pointer;
+    background: #ffadad;
+    transition: 0.2s;
+  }
+`;
+
+export const Span = styled.span`
+  margin-left: 280px;
 
   :hover {
     cursor: pointer;
