@@ -3,6 +3,9 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 import Text from 'components/atoms/Text/Text';
 
+import COLORS from 'styles/guide/colors';
+import SPACING from 'styles/guide/spacing';
+
 import * as Styled from './styles';
 
 import SIDEBAR_OPTIONS from './SIDEBAR_OPTIONS';
@@ -15,7 +18,7 @@ const Sidebar: React.FC = () => {
     history.push(route);
   };
 
-  const renderItemSidebar = ({ text, route }) => {
+  const renderItemSidebar = ({ text, route, Icon }) => {
     const selected: boolean = route === pathname;
 
     return (
@@ -24,7 +27,25 @@ const Sidebar: React.FC = () => {
         onClick={() => onClickOptionSidebarHandler(route)}
         selected={selected}
       >
-        <Text>{text}</Text>
+        <Styled.WrapperIcon>
+          <Icon
+            style={{
+              color: selected ? 'white' : COLORS.gray700
+            }}
+            size='25px'
+          />
+        </Styled.WrapperIcon>
+
+        <Styled.WrapperText>
+          <Text
+            bold={selected}
+            semiBold={!selected}
+            color={selected ? COLORS.white : COLORS.gray500}
+            regular
+          >
+            {text}
+          </Text>
+        </Styled.WrapperText>
       </Styled.WrapperItemSidebar>
     );
   };
