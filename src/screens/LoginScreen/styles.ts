@@ -12,6 +12,7 @@ export const Container = styled.div`
   margin: 0;
   padding: 0;
   background: url(${lgbgImg});
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
@@ -81,7 +82,7 @@ export const Button = styled.button`
   height: 35px;
   width: 405px;
   color: #000;
-  background: rgb(81, 0, 119);
+  background: #907aff;
   border-radius: 20px;
   cursor: pointer;
 
