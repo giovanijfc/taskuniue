@@ -8,19 +8,19 @@ const LoginScreen = () => {
   return (
     <Styled.Container>
       <Styled.Form action=''>
-        <Styled.Span>Create account?</Styled.Span>
-        <Styled.Title>Member Login</Styled.Title>
+        <Styled.Title>Seja bem Vindo</Styled.Title>
         <Styled.Img src={userimg} width='100' height='100' alt='' />
-        <Styled.Input type='text' placeholder='Username or email' />
-        <Styled.Input type='password' placeholder='password' />
+        <Styled.Input type='text' placeholder='Nome de Usuario ou Email' />
+        <Styled.Input type='password' placeholder='Senha' />
         <p>
-          <input type='checkbox' id='Remember me'></input>
-          <label>Remember me</label>
-          <a href='#'>Forgot password?</a>
+          <input type='checkbox' id='Lembrar me'></input>
+          <Styled.Label>Lembrar me</Styled.Label>
+          <a href='#'>Esqueceu sua senha?</a>
           <Styled.Button type='submit' value='Submit'>
             Login
           </Styled.Button>
         </p>
+        <Styled.Span>Ainda não possui Conta?</Styled.Span>
       </Styled.Form>
     </Styled.Container>
   );

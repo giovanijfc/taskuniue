@@ -18,13 +18,12 @@ export const Container = styled.div`
 
   a {
     line-break: keep-all;
-    display: inline-block;
-    text-align: justify;
     font-weight: bold;
     font-size: 19px;
     line-height: 28px;
     color: black;
-    margin-left: 70px;
+    margin-left: 65px;
+    text-decoration: none;
 
     :hover {
       transition: 0.2s;
@@ -37,7 +36,7 @@ export const Form = styled.form`
   width: 500px;
   height: 440px;
   border: 2px solid #000;
-  border-radius: 2px 0px 2px 0px;
+  border-radius: 15px;
   color: rgb(0, 0, 0);
   background-color: white;
   top: 50%;
@@ -72,6 +71,7 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
+  font-size: 19px;
   margin-left: -5px;
   margin-top: 25px;
   box-sizing: border-box;
@@ -93,11 +93,21 @@ export const Button = styled.button`
 `;
 
 export const Span = styled.span`
-  margin-left: 280px;
+  margin-left: 110px;
 
   :hover {
     cursor: pointer;
     background: #ffadad;
     transition: 0.2s;
   }
+`;
+
+export const Label = styled.label`
+  line-break: keep-all;
+  display: inline-block;
+  text-align: justify;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 28px;
+  color: black;
 `;
