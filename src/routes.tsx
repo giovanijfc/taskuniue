@@ -6,27 +6,16 @@ import {
   Switch
 } from 'react-router-dom';
 
-import HeaderSideRoute from 'components/atoms/HeaderSideRoute/HeaderSideRoute';
+import FallbackLoading from 'components/templates/FallbackLoading/FallbackLoading';
 
 const LoginScreen = React.lazy(() => import('screens/LoginScreen/LoginScreen'));
 const HomeScreen = React.lazy(() => import('screens/HomeScreen/HomeScreen'));
+const HeaderSideRoute = React.lazy(() =>
+  import('components/atoms/HeaderSideRoute/HeaderSideRoute')
+);
 
 const Routes = () => (
-  <React.Suspense
-    fallback={
-      <div
-        style={{
-          alignItems: 'center',
-          justifyContent: 'center',
-          width: '100vw',
-          height: '100vh',
-          background: 'red'
-        }}
-      >
-        Loading...
-      </div>
-    }
-  >
+  <React.Suspense fallback={FallbackLoading}>
     <Router>
       <Switch>
         <Route exact path='/login' component={LoginScreen} />

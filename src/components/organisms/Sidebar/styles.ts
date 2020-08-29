@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import COLORS from 'styles/guide/colors';
-import SPACING from 'styles/guide/spacing';
+import COLORS from 'styles/guide/COLORS';
+import SPACING from 'styles/guide/SPACING';
 
 export const Container = styled.div`
   width: 250px;
