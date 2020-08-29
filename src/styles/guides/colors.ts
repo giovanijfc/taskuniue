@@ -3,7 +3,6 @@ interface Colors {
   secondary: string;
   tertiary: string;
   background: string;
-  backgroundFullLight: string;
   backgroundLight: string;
   backgroundHeavy: string;
   white: string;
