@@ -3,7 +3,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 import Text from 'components/atoms/Text/Text';
 
-import COLORS from 'styles/guide/COLORS';
+import COLORS from 'styles/guide/colors';
 
 import * as Styled from './styles';
 

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import COLORS from 'styles/guide/COLORS';
+import COLORS from 'styles/guide/colors';
 import SPACING from 'styles/guide/SPACING';
 
 export const Container = styled.div`
