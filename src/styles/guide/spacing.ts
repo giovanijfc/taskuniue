@@ -7,7 +7,7 @@ interface Spacing {
   huge: string;
 }
 
-const spacing: Spacing = {
+const SPACING: Spacing = {
   nano: '6px',
   small: '15px',
   default: '20px',
@@ -16,4 +16,4 @@ const spacing: Spacing = {
   huge: '42px'
 };
 
-export default spacing;
+export default SPACING;

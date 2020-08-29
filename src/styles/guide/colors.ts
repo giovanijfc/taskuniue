@@ -27,7 +27,7 @@ interface Colors {
   gray900: string;
 }
 
-const colors: Colors = {
+const COLORS: Colors = {
   primary: '#907AFF',
   secondary: '#2CDBC2',
   tertiary: '#FD6E8C',
@@ -56,4 +56,4 @@ const colors: Colors = {
   gray900: '#212121'
 };
 
-export default colors;
+export default COLORS;
