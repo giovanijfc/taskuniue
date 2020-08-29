@@ -5,11 +5,10 @@ import SPACING from 'styles/guide/spacing';
 
 export const Container = styled.div`
   width: 250px;
-  height: 100vh;
+  height: 100%;
   min-width: 200px;
   display: flex;
   flex-direction: column;
-  position: fixed;
   padding-top: 100px;
   background-color: ${COLORS.white};
 `;
