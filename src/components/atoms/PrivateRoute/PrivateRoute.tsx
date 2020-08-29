@@ -2,11 +2,7 @@ import React, { useLayoutEffect } from 'react';
 import { auth } from 'firebase';
 import { useHistory, Route } from 'react-router-dom';
 
-const Sidebar = React.lazy(() =>
-  import('components/organisms/Sidebar/Sidebar')
-);
-
-const PrivateRoutes = props => {
+const PrivateRoute = ({ component: Component, ...props }) => {
   const history = useHistory();
 
   useLayoutEffect(() => {
@@ -17,12 +13,7 @@ const PrivateRoutes = props => {
     }
   }, [history]);
 
-  return (
-    <>
-      <Sidebar />
-      <Route {...props} />
-    </>
-  );
+  return <Route {...props} />;
 };
 
-export default PrivateRoutes;
+export default PrivateRoute;

@@ -3,7 +3,7 @@ import { IoMdNotificationsOutline } from 'react-icons/io';
 
 export default [
   {
-    route: '/',
+    route: '/tasks',
     text: 'Tarefas',
     Icon: BsPencilSquare
   },
