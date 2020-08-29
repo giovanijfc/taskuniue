@@ -26,14 +26,4 @@ const CreateAccount = () => {
   );
 };
 
-export const Label = styled.label`
-  line-break: keep-all;
-  display: inline-block;
-  text-align: justify;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 28px;
-  color: black;
-`;
-
 export default CreateAccount;
