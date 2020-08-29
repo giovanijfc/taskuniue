@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import SPACING from 'styles/guide/SPACING';
 
 export const Container = styled.div`

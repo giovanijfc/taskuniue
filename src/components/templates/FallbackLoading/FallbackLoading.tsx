@@ -11,7 +11,7 @@ import logoIcon from 'assets/icons/logo.svg';
 const FallbackLoading = (
   <Styled.Container>
     <Styled.Image src={logoIcon} />
-    <Text bold color={COLORS.primary} extraRegular>
+    <Text semiBold color={COLORS.primary} extraRegular>
       Carregando...
     </Text>
   </Styled.Container>

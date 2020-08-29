@@ -25,13 +25,22 @@ const getFontSize = (
   return '2.5em';
 };
 
-const getFontWeight = (bold?: boolean, semiBold?: boolean): number => {
+const getFontWeight = (bold?: boolean, semiBold?: boolean): any => {
   if (bold) {
-    return 900;
+    return {
+      'font-weight': 'bolder',
+      'font-family': 'SofiaProBlack'
+    };
   } else if (semiBold) {
-    return 500;
+    return {
+      'font-weight': 'normal',
+      'font-family': 'Sofia Pro'
+    };
   } else {
-    return 100;
+    return {
+      'font-weight': 'initial',
+      'font-family': 'Sofia'
+    };
   }
 };
 
@@ -56,6 +65,7 @@ const Text = styled.label<{
   }) => getFontSize(extraSmall, small, extraRegular, regular, extraHigh, high)};
   color: ${({ color }) => color || 'black'};
   font-weight: ${({ bold, semiBold }) => getFontWeight(bold, semiBold)};
+  font-weight: normal;
 `;
 
 export default Text;

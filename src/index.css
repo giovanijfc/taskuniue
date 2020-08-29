@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css?family=Sofia+Pro+Soft');
+@import url('//db.onlinewebfonts.com/c/f3d5ff31ac8e997dff2b13190f163bc0?family=Sofia');
+@import url('//db.onlinewebfonts.com/c/060e116a70e3096c52db16f61aaab194?family=Sofia+Pro');
+@import url('//db.onlinewebfonts.com/c/580c0d9fec098eb15b672ab159a0e6f6?family=SofiaProBlack');
 
 body {
   margin: 0;
-  font-family: 'Sofia Pro Soft', sans-serif;
+  font-family: 'Sofia', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 0.3px;
 }
 
 code {

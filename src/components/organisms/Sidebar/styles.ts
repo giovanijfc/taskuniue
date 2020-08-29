@@ -4,7 +4,7 @@ import COLORS from 'styles/guide/COLORS';
 import SPACING from 'styles/guide/SPACING';
 
 export const Container = styled.div`
-  width: 250px;
+  width: 280px;
   height: 100%;
   min-width: 200px;
   display: flex;
@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const WrapperItemSidebar = styled.div<{ selected: boolean }>`
-  height: 80px;
+  height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;

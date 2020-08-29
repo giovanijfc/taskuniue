@@ -37,10 +37,9 @@ const Sidebar: React.FC = () => {
 
         <Styled.WrapperText>
           <Text
-            bold={selected}
-            semiBold={!selected}
+            bold
             color={selected ? COLORS.white : COLORS.gray500}
-            regular
+            style={{ fontSize: selected ? '1.05em' : '0.9em' }}
           >
             {text}
           </Text>
