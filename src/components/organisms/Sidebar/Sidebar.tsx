@@ -1,19 +1,19 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
 
-import Text from 'components/atoms/Text/Text';
-
 import COLORS from 'styles/guides/colors';
+
+import { SideBarType } from 'hooks/useSidebar';
 
 import * as Styled from './styles';
 
 import SIDEBAR_OPTIONS from './SIDEBAR_OPTIONS';
 
-const Sidebar: React.FC = () => {
+const Sidebar: React.FC<SideBarType> = sidebar => {
   const history = useHistory();
   const { pathname } = useLocation();
 
-  const onClickOptionSidebarHandler = route => {
+  const onClickOptionSidebarHandler = (route: string) => {
     history.push(route);
   };
 
@@ -36,20 +36,20 @@ const Sidebar: React.FC = () => {
         </Styled.WrapperIcon>
 
         <Styled.WrapperText>
-          <Text
+          <Styled.TextItem
             fontWeight='bold'
             color={selected ? COLORS.white : COLORS.gray500}
             size={selected ? 'regular' : 'small'}
           >
             {text}
-          </Text>
+          </Styled.TextItem>
         </Styled.WrapperText>
       </Styled.WrapperItemSidebar>
     );
   };
 
   return (
-    <Styled.Container>
+    <Styled.Container isOpen={sidebar.isOpen}>
       {SIDEBAR_OPTIONS.map(renderItemSidebar)}
     </Styled.Container>
   );
