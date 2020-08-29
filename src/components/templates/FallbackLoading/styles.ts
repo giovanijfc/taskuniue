@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import SPACING from 'styles/guide/spacing';
+import SPACING from 'styles/guides/spacing';
 
 export const Container = styled.div`
   width: 100vw;

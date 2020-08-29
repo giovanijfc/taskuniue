@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import COLORS from 'styles/guide/colors';
+import COLORS from 'styles/guides/colors';
 
 export const Container = styled.div`
   width: 100%;

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Text from 'components/atoms/Text/Text';
 
-import COLORS from 'styles/guide/colors';
+import COLORS from 'styles/guides/colors';
 
 import * as Styled from './styles';
 
@@ -11,7 +11,7 @@ import logoIcon from 'assets/icons/logo.svg';
 const FallbackLoading = (
   <Styled.Container>
     <Styled.Image src={logoIcon} />
-    <Text semiBold color={COLORS.primary} extraRegular>
+    <Text fontWeight='regular' color={COLORS.primary} size='extraRegular'>
       Carregando...
     </Text>
   </Styled.Container>

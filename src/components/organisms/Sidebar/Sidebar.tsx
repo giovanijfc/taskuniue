@@ -3,7 +3,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 import Text from 'components/atoms/Text/Text';
 
-import COLORS from 'styles/guide/colors';
+import COLORS from 'styles/guides/colors';
 
 import * as Styled from './styles';
 
@@ -37,9 +37,9 @@ const Sidebar: React.FC = () => {
 
         <Styled.WrapperText>
           <Text
-            bold
+            fontWeight='bold'
             color={selected ? COLORS.white : COLORS.gray500}
-            style={{ fontSize: selected ? '1.05em' : '0.9em' }}
+            size={selected ? 'regular' : 'small'}
           >
             {text}
           </Text>

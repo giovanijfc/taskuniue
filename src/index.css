@@ -1,13 +1,38 @@
-@import url('//db.onlinewebfonts.com/c/f3d5ff31ac8e997dff2b13190f163bc0?family=Sofia');
-@import url('//db.onlinewebfonts.com/c/060e116a70e3096c52db16f61aaab194?family=Sofia+Pro');
-@import url('//db.onlinewebfonts.com/c/580c0d9fec098eb15b672ab159a0e6f6?family=SofiaProBlack');
+@font-face {
+  font-family: 'Sofia Light';
+  src: local('Sofia-Light'),
+    url('./assets/fonts/Sofia-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Regular';
+  src: local('Sofia-Regular'),
+    url('./assets/fonts/Sofia-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Medium';
+  src: local('Sofia-Medium'),
+    url('./assets/fonts/Sofia-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Semi Bold';
+  src: local('Sofia-Semi-Bold'),
+    url('./assets/fonts/Sofia-Semi-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Bold';
+  src: local('Sofia-Bold'), url('./assets/fonts/Sofia-Bold.woff') format('woff');
+}
 
 body {
   margin: 0;
-  font-family: 'Sofia', sans-serif;
+  font-family: 'Sofia Light', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  letter-spacing: 0.3px;
+  font-size: '3.0em';
 }
 
 code {
