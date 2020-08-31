@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
+import COLORS from 'styles/guides/colors';
+
 export const Container = styled.div`
-  width: 500px;
-  height: 500px;
-  background-color: '#000';
+  width: 100%;
+  display: flex;
+  background-color: ${COLORS.background};
 `;

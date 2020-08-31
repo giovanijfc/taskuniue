@@ -14,7 +14,6 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: row;
   background-color: ${COLORS.white};
-  padding-left: 44px;
   box-shadow: 0px 0px 6px 2px ${COLORS.gray300};
   z-index: 3;
 `;
@@ -22,6 +21,7 @@ export const Container = styled.div`
 export const WrapperOptionMenu = styled.div`
   display: flex;
   align-items: center;
+  padding-left: 44px;
 `;
 
 export const StyledTextMenu = styled(Text).attrs({
