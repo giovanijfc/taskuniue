@@ -7,11 +7,9 @@ import SPACING from 'styles/guides/spacing';
 
 export const Container = styled.div<{ isOpen: boolean }>`
   width: ${({ isOpen }) => (isOpen ? '250px' : '0px')};
-  height: 100%;
-  min-width: ${({ isOpen }) => (isOpen ? '200px' : '0px')};
   display: flex;
   flex-direction: column;
-  padding-top: 90px;
+  padding-top: 85px;
   background-color: ${COLORS.white};
   transition: all 0.5s;
 `;

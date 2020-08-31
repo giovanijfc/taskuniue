@@ -3,8 +3,8 @@ import { IoMdNotificationsOutline } from 'react-icons/io';
 
 export default [
   {
-    route: '/tasks',
-    text: 'Tarefas',
+    route: '/kanban',
+    text: 'Kanban',
     Icon: BsPencilSquare
   },
   {

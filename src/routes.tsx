@@ -9,7 +9,9 @@ import {
 import FallbackLoading from 'components/templates/FallbackLoading/FallbackLoading';
 
 const LoginScreen = React.lazy(() => import('screens/LoginScreen/LoginScreen'));
-const TasksScreen = React.lazy(() => import('screens/TasksScreen/TasksScreen'));
+const KanbanScreen = React.lazy(() =>
+  import('screens/KanbanScreen/KanbanScreen')
+);
 const HeaderSideRoute = React.lazy(() =>
   import('components/atoms/HeaderSideRoute/HeaderSideRoute')
 );
@@ -20,8 +22,8 @@ const Routes = () => (
       <Switch>
         <Route exact path='/login' component={LoginScreen} />
 
-        <HeaderSideRoute exact path='/tasks' component={TasksScreen} />
-        <HeaderSideRoute exact path='/notifications' component={TasksScreen} />
+        <HeaderSideRoute exact path='/kanban' component={KanbanScreen} />
+        <HeaderSideRoute exact path='/notifications' component={KanbanScreen} />
 
         <Route exact path='*' render={() => <Redirect to='/login' />} />
       </Switch>

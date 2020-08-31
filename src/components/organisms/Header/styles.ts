@@ -9,7 +9,7 @@ import { VscMenu } from 'react-icons/vsc';
 
 export const Container = styled.div`
   width: 100%;
-  height: 80px;
+  height: 115px;
   display: flex;
   align-items: center;
   flex-direction: row;
