@@ -1,5 +1,7 @@
 import React from 'react';
 
+import Column from 'components/molecules/Column/Column';
+
 import Text from 'components/atoms/Text/Text';
 import Button from 'components/atoms/Button/Button';
 
@@ -38,11 +40,11 @@ const KanbanScreen = () => {
         </Styled.WrapperButtonAddTask>
       </Styled.WrapperHeader>
 
-      <Styled.WrapperBoardLine>
-        {BOARDS.map((_, index) => (
-          <Styled.WrapperBoard index={index}></Styled.WrapperBoard>
+      <Styled.WrapperColumns>
+        {BOARDS.map((column, index) => (
+          <Column item={{ ...column, index }} />
         ))}
-      </Styled.WrapperBoardLine>
+      </Styled.WrapperColumns>
     </Styled.Container>
   );
 };

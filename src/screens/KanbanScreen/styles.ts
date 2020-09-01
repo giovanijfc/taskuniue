@@ -16,6 +16,7 @@ export const WrapperHeader = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  padding-left: ${SPACING.default};
 `;
 
 export const WrapperButtonAddTask = styled.div`
@@ -28,21 +29,13 @@ export const WrapperButtonAddTask = styled.div`
   border-radius: 8px;
 `;
 
-export const WrapperBoardLine = styled.div`
+export const WrapperColumns = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: row;
-  margin-top: ${SPACING.large};
+  margin-top: ${SPACING.default};
   padding-bottom: ${SPACING.small};
+  padding-left: ${SPACING.default};
   overflow-x: auto;
-`;
-
-export const WrapperBoard = styled.div<{ index: number }>`
-  height: 100%;
-  width: 30%;
-  min-width: 22%;
-  background: ${COLORS.white};
-  border-radius: 8px;
-  margin-left: ${({ index }) => (index > 0 ? SPACING.small : '0px')};
 `;
