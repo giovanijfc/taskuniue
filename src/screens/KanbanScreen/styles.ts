@@ -12,6 +12,22 @@ export const Container = styled.div`
   padding: 60px ${SPACING.huge} ${SPACING.default} ${SPACING.huge};
 `;
 
+export const WrapperHeader = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+`;
+
+export const WrapperButtonAddTask = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: ${SPACING.small};
+  background: ${COLORS.white};
+  border-radius: 8px;
+`;
+
 export const WrapperBoardLine = styled.div`
   width: 100%;
   height: 100%;

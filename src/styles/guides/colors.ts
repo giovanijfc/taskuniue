@@ -1,5 +1,6 @@
 interface Colors {
   primary: string;
+  primaryHover: string;
   secondary: string;
   tertiary: string;
   background: string;
@@ -29,6 +30,7 @@ interface Colors {
 
 const COLORS: Colors = {
   primary: '#907AFF',
+  primaryHover: '#765df0',
   secondary: '#2CDBC2',
   tertiary: '#FD6E8C',
   background: '#EEF0F4',
