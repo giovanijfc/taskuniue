@@ -27,7 +27,7 @@ export const WrapperOptionMenu = styled.div`
 export const StyledTextMenu = styled(Text).attrs({
   fontWeight: 'regular',
   size: 'regular',
-  color: COLORS.gray400
+  color: COLORS.gray600
 })`
   margin-left: ${SPACING.high};
   margin-bottom: 0.4px;
@@ -36,12 +36,12 @@ export const StyledTextMenu = styled(Text).attrs({
 export const MenuIcon = styled(VscMenu).attrs({ size: '26px' })<{
   isOpen: boolean;
 }>`
-  color: ${COLORS.gray400};
+  color: ${COLORS.gray600};
   cursor: pointer;
   transform: ${({ isOpen }) => (isOpen ? 'rotate(0deg)' : 'rotate(180deg)')};
   transition: all 0.5s;
 
   :hover {
-    color: ${COLORS.gray500};
+    color: ${COLORS.gray900};
   }
 `;
