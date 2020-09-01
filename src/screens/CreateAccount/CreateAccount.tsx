@@ -3,15 +3,8 @@ import React from 'react';
 import * as Styled from './styles';
 import userimg from 'assets/icons/user.svg';
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
 
-const LoginScreen = () => {
-  const history = useHistory();
-
-  function handleClick() {
-    history.push('/ForgotPassword');
-  }
-
+const CreateAccount = () => {
   return (
     <Styled.Container>
       <Styled.Form action=''>
@@ -22,7 +15,7 @@ const LoginScreen = () => {
         <p>
           <input type='checkbox' id='Lembrar me'></input>
           <Styled.Label>Lembrar me</Styled.Label>
-          <a onClick={handleClick}>Esqueceu sua senha?</a>
+          <a href='#'>Esqueceu sua senha?</a>
           <Styled.Button type='submit' value='Submit'>
             Login
           </Styled.Button>
@@ -33,4 +26,14 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export const Label = styled.label`
+  line-break: keep-all;
+  display: inline-block;
+  text-align: justify;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 28px;
+  color: black;
+`;
+
+export default CreateAccount;

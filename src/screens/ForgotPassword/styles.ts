@@ -11,8 +11,8 @@ export const Img = styled.img`
 `;
 
 export const Container = styled.div`
-  margin: 0;
-  padding: 0;
+  display: flex;
+  flex-direction: column;
   background: url(${lgbgImg});
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,7 +25,6 @@ export const Container = styled.div`
     font-size: 19px;
     line-height: 28px;
     color: black;
-    margin-left: 65px;
     text-decoration: none;
 
     :hover {
@@ -36,6 +35,10 @@ export const Container = styled.div`
 `;
 
 export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 500px;
   height: 440px;
   border: 2px solid #000;
@@ -47,23 +50,22 @@ export const Form = styled.form`
   position: absolute;
   transform: translate(-50%, -50%);
   box-sizing: border-box;
-  padding: 68px 50px;
+  padding: ${SPACING.default};
 `;
 
 export const Title = styled.h1`
-  margin: 0;
-  padding-top: 0;
-  padding-left: 0;
-  padding-bottom: 20px;
   text-transform: uppercase;
   text-align: center;
   font-size: 25px;
 `;
 
+export const Text = styled.h4`
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 15px;
+`;
 export const Input = styled.input`
   width: 100%;
-  margin-bottom: 21px;
-  margin-top: 21px;
   padding: 12px 20px;
   box-sizing: border-box;
   border-radius: 1px black;
@@ -75,8 +77,6 @@ export const Input = styled.input`
 
 export const Button = styled.button`
   font-size: 19px;
-  margin-left: -5px;
-  margin-top: 25px;
   box-sizing: border-box;
   display: block;
   border: 0;
@@ -96,21 +96,12 @@ export const Button = styled.button`
 `;
 
 export const Span = styled.span`
-  margin-left: 110px;
+  display: flex;
+  flex-direction: column;
+  margin-top: ${SPACING.small};
 
   :hover {
     cursor: pointer;
-    background: #ffadad;
     transition: 0.2s;
   }
-`;
-
-export const Label = styled.label`
-  line-break: keep-all;
-  display: inline-block;
-  text-align: justify;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 28px;
-  color: black;
 `;

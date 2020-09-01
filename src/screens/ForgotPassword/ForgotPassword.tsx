@@ -3,34 +3,27 @@ import React from 'react';
 import * as Styled from './styles';
 import userimg from 'assets/icons/user.svg';
 import styled from 'styled-components';
-import { useHistory } from 'react-router-dom';
 
-const LoginScreen = () => {
-  const history = useHistory();
-
-  function handleClick() {
-    history.push('/ForgotPassword');
-  }
-
+const ForgotPassword = () => {
   return (
     <Styled.Container>
       <Styled.Form action=''>
         <Styled.Title>Seja bem Vindo</Styled.Title>
+        <Styled.Text>
+          Para redefinir a sua senha Digite o seu email ou usuario!
+        </Styled.Text>
         <Styled.Img src={userimg} width='100' height='100' alt='' />
         <Styled.Input type='text' placeholder='Nome de Usuario ou Email' />
-        <Styled.Input type='password' placeholder='Senha' />
         <p>
-          <input type='checkbox' id='Lembrar me'></input>
-          <Styled.Label>Lembrar me</Styled.Label>
-          <a onClick={handleClick}>Esqueceu sua senha?</a>
           <Styled.Button type='submit' value='Submit'>
-            Login
+            Redefinir Senha!
           </Styled.Button>
         </p>
+        <Styled.Span>Fazer Login</Styled.Span>
         <Styled.Span>Ainda não possui Conta?</Styled.Span>
       </Styled.Form>
     </Styled.Container>
   );
 };
 
-export default LoginScreen;
+export default ForgotPassword;

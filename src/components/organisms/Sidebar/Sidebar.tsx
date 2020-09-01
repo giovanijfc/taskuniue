@@ -3,7 +3,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 import COLORS from 'styles/guides/colors';
 
-import { SideBarType } from 'hooks/useSidebar';
+import COLORS from 'styles/guide/COLORS';
 
 import * as Styled from './styles';
 
