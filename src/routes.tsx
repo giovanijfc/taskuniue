@@ -9,8 +9,15 @@ import {
 import FallbackLoading from 'components/templates/FallbackLoading/FallbackLoading';
 
 const LoginScreen = React.lazy(() => import('screens/LoginScreen/LoginScreen'));
+const HomeScreen = React.lazy(() => import('screens/HomeScreen/HomeScreen'));
 const ForgotPassword = React.lazy(() =>
   import('screens/ForgotPassword/ForgotPassword')
+);
+const CreateAccount = React.lazy(() =>
+  import('screens/CreateAccount/CreateAccount')
+);
+const HeaderSideRoute = React.lazy(() =>
+  import('components/atoms/HeaderSideRoute/HeaderSideRoute')
 );
 const CreateAccount = React.lazy(() =>
   import('screens/CreateAccount/CreateAccount')

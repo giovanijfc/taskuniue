@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 import lgbgImg from 'assets/images/lgbg.jpg';
-import { COLORS } from 'styles/guide/COLORS';
-import { SPACING } from 'styles/guide/SPACING';
+import COLORS from 'styles/guides/colors';
+import SPACING from 'styles/guides/spacing';
 
 export const Img = styled.img`
   position: absolute;

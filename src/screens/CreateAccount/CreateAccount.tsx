@@ -2,7 +2,6 @@ import React from 'react';
 
 import * as Styled from './styles';
 import userimg from 'assets/icons/user.svg';
-import styled from 'styled-components';
 
 const CreateAccount = () => {
   return (
