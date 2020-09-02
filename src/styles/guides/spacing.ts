@@ -16,4 +16,4 @@ const SPACING: Spacing = {
   huge: '42px'
 };
 
-export default Spacing;
+export default SPACING;
