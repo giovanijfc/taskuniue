@@ -19,10 +19,6 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
 
-  label {
-    text-align: center;
-  }
-
   a {
     line-break: keep-all;
     font-weight: bold;

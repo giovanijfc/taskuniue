@@ -25,7 +25,7 @@ export const Container = styled.div`
     font-size: 19px;
     line-height: 28px;
     color: black;
-    margin-left: 65px;
+    margin-left: 105px;
     text-decoration: none;
 
     :hover {
