@@ -26,7 +26,7 @@ const Routes = () => (
       <Switch>
         <Route exact path='/login' component={LoginScreen} />
         <Route exact path='/forgotpassword' component={ForgotPassword} />
-        <Route exact path='/createaccount' component={CreateAccount} />
+        <Route exact path='/CreateAccount' component={CreateAccount} />
 
         <HeaderSideRoute exact path='/kanban' component={KanbanScreen} />
         <HeaderSideRoute exact path='/notifications' component={KanbanScreen} />
