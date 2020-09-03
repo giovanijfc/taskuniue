@@ -40,27 +40,33 @@ const CreateAccount = () => {
       >
         <Styled.Title>Seja bem Vindo</Styled.Title>
         <Styled.Img src={userimg} width='100' height='100' alt='' />
-        <Styled.Input
-          onChange={event => {
-            setEmail(event.target.value);
-          }}
-          type='text'
-          placeholder='Digite o Seu Email'
-        />
-        <Styled.Input
-          onChange={event => {
-            setPassword(event.target.value);
-          }}
-          type='password'
-          placeholder='Senha'
-        />
-        <p>
-          <a onClick={forgPush}>Esqueceu sua senha?</a>
-          <Styled.Button type='submit' value='Submit'>
-            Cadastrar
-          </Styled.Button>
-        </p>
-        <Styled.Span onClick={loginPush}>Ja possui Conta?</Styled.Span>
+        {loading ? (
+          <label>Loading</label>
+        ) : (
+          <div>
+            <Styled.Input
+              onChange={event => {
+                setEmail(event.target.value);
+              }}
+              type='text'
+              placeholder='Digite o Seu Email'
+            />
+            <Styled.Input
+              onChange={event => {
+                setPassword(event.target.value);
+              }}
+              type='password'
+              placeholder='Senha'
+            />
+            <p>
+              <a onClick={forgPush}>Esqueceu sua senha?</a>
+              <Styled.Button type='submit' value='Submit'>
+                Cadastrar
+              </Styled.Button>
+            </p>
+            <Styled.Span onClick={loginPush}>Ja possui Conta?</Styled.Span>
+          </div>
+        )}
       </Styled.Form>
     </Styled.Container>
   );

@@ -31,9 +31,10 @@ const ForgotPassword = () => {
 
           auth
             .sendPasswordResetEmail(emailAddress)
-            .then(function () {})
+            .then(function () {
+              setLoading(false);
+            })
             .catch(function (error) {});
-          console.log(emailAddress);
         }}
       >
         <Styled.Title>Seja bem Vindo</Styled.Title>
@@ -41,20 +42,28 @@ const ForgotPassword = () => {
           Para redefinir a sua senha Digite o seu email!
         </Styled.Text>
         <Styled.Img src={userimg} width='100' height='100' alt='' />
-        <Styled.Input
-          onChange={event => {
-            setEmailAddress(event.target.value);
-          }}
-          type='text'
-          placeholder='Informe o seu Email'
-        />
-        <p>
-          <Styled.Button type='submit' value='Submit'>
-            Redefinir Senha!
-          </Styled.Button>
-        </p>
-        <Styled.Span onClick={loginPush}>Fazer Login</Styled.Span>
-        <Styled.Span onClick={createPush}>Ainda não possui Conta?</Styled.Span>
+        {loading ? (
+          <label>Redefinção de senha enviada para o email</label>
+        ) : (
+          <div>
+            <Styled.Input
+              onChange={event => {
+                setEmailAddress(event.target.value);
+              }}
+              type='text'
+              placeholder='Informe o seu Email'
+            />
+            <p>
+              <Styled.Button type='submit' value='Submit'>
+                Redefinir Senha!
+              </Styled.Button>
+            </p>
+            <Styled.Span onClick={loginPush}>Fazer Login</Styled.Span>
+            <Styled.Span onClick={createPush}>
+              Ainda não possui Conta?
+            </Styled.Span>
+          </div>
+        )}
       </Styled.Form>
     </Styled.Container>
   );
