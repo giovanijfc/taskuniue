@@ -13,6 +13,7 @@ export const Img = styled.img`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  text-align: center;
   background: url(${lgbgImg});
   background-repeat: no-repeat;
   background-size: cover;
