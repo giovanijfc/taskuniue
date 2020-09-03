@@ -96,7 +96,7 @@ export const Button = styled.button`
 `;
 
 export const Span = styled.span`
-  margin-left: 110px;
+  margin-left: 135px;
 
   :hover {
     cursor: pointer;

@@ -2,8 +2,18 @@ import React from 'react';
 
 import * as Styled from './styles';
 import userimg from 'assets/icons/user.svg';
+import { useHistory } from 'react-router-dom';
 
 const ForgotPassword = () => {
+  const history = useHistory();
+
+  const loginPush = () => {
+    history.push('/login');
+  };
+  const createPush = () => {
+    history.push('/CreateAccount');
+  };
+
   return (
     <Styled.Container>
       <Styled.Form action=''>
@@ -18,8 +28,8 @@ const ForgotPassword = () => {
             Redefinir Senha!
           </Styled.Button>
         </p>
-        <Styled.Span>Fazer Login</Styled.Span>
-        <Styled.Span>Ainda não possui Conta?</Styled.Span>
+        <Styled.Span onClick={loginPush}>Fazer Login</Styled.Span>
+        <Styled.Span onClick={createPush}>Ainda não possui Conta?</Styled.Span>
       </Styled.Form>
     </Styled.Container>
   );

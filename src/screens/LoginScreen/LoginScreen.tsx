@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import firebase from 'firebase';
 
 import * as Styled from './styles';
-import FallbackLoading from 'components/templates/FallbackLoading/FallbackLoading';
 import userimg from 'assets/icons/user.svg';
 import { useHistory } from 'react-router-dom';
 
@@ -13,9 +12,13 @@ const LoginScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function handleClick() {
+  const forgPush = () => {
     history.push('/ForgotPassword');
-  }
+  };
+
+  const createPush = () => {
+    history.push('/CreateAccount');
+  };
 
   return (
     <Styled.Container>
@@ -43,7 +46,7 @@ const LoginScreen = () => {
         <Styled.Title>Seja bem Vindo</Styled.Title>
         <Styled.Img src={userimg} width='100' height='100' alt='' />
         {loading ? (
-          <label>{FallbackLoading}</label>
+          <label>loading</label>
         ) : (
           <div>
             <Styled.Input
@@ -63,12 +66,14 @@ const LoginScreen = () => {
             <p>
               <input type='checkbox' id='Lembrar me'></input>
               <Styled.Label>Lembrar me</Styled.Label>
-              <a onClick={handleClick}>Esqueceu sua senha?</a>
+              <a onClick={forgPush}>Esqueceu sua senha?</a>
               <Styled.Button type='submit' value='Submit'>
                 Login
               </Styled.Button>
             </p>
-            <Styled.Span>Ainda não possui Conta?</Styled.Span>
+            <Styled.Span onClick={createPush}>
+              Ainda não possui Conta?
+            </Styled.Span>
           </div>
         )}
       </Styled.Form>
