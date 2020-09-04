@@ -1,15 +1,9 @@
-import React, { useLayoutEffect } from 'react';
-import firebase from 'firebase/app';
+import React from 'react';
 
-import firebaseConfig from './constants/firebaseConfig';
-
-import LoginScreen from './screens/LoginScreen/LoginScreen';
+import Routes from 'routes';
 
 function App() {
-  useLayoutEffect(() => {
-    firebase.initializeApp(firebaseConfig);
-  }, []);
-  return <LoginScreen />;
+  return <Routes />;
 }
 
 export default App;

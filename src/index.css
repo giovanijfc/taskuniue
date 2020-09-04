@@ -1,10 +1,46 @@
+@font-face {
+  font-family: 'Sofia Light';
+  src: local('Sofia-Light'),
+    url('./assets/fonts/Sofia-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Regular';
+  src: local('Sofia-Regular'),
+    url('./assets/fonts/Sofia-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Medium';
+  src: local('Sofia-Medium'),
+    url('./assets/fonts/Sofia-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Semi Bold';
+  src: local('Sofia-Semi-Bold'),
+    url('./assets/fonts/Sofia-Semi-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Sofia Bold';
+  src: local('Sofia-Bold'), url('./assets/fonts/Sofia-Bold.woff') format('woff');
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Sofia Light', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: '3.0em';
+  overflow-x: hidden;
+  overflow-y: hidden;
+  webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 code {
