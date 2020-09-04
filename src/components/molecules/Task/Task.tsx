@@ -7,9 +7,9 @@ import SPACING from 'styles/guides/spacing';
 
 import * as Styled from './styles';
 
-const Task = ({ data }) => {
+const Task = ({ data, isDragging }) => {
   return (
-    <Styled.Container>
+    <Styled.Container isDragging={isDragging}>
       <Text size='extraRegular' fontWeight='semiBold'>
         {data.title}
       </Text>

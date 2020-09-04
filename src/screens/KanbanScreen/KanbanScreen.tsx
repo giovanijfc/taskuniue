@@ -1,4 +1,5 @@
 import React from 'react';
+import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 import Column from 'components/molecules/Column/Column';
 import Task from 'components/molecules/Task/Task';
@@ -41,11 +42,46 @@ const KanbanScreen = () => {
         </Styled.WrapperButtonAddTask>
       </Styled.WrapperHeader>
 
-      <Styled.WrapperColumns>
-        {columns.map((column, index) => (
-          <Column data={column} index={index} />
-        ))}
-      </Styled.WrapperColumns>
+      <DragDropContext onDragEnd={result => console.log(result)}>
+        <Styled.WrapperColumns>
+          {columns.map((column, index) => (
+            <Droppable droppableId={JSON.stringify(column.id)}>
+              {(provided, snapshot) => (
+                <div key={column.id} ref={provided.innerRef}>
+                  <Column
+                    draggingOver={snapshot.isDraggingOver}
+                    data={column}
+                    index={index}
+                  >
+                    {column.tasks.map((task, index) => (
+                      <Draggable
+                        key={task.id}
+                        draggableId={JSON.stringify(task.id)}
+                        index={index}
+                      >
+                        {(provided, snapshot) => (
+                          <div
+                            style={provided.draggableProps.style}
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                          >
+                            <Task
+                              isDragging={snapshot.isDragging}
+                              data={task}
+                            />
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
+                  </Column>
+                  {provided.placeholder}
+                </div>
+              )}
+            </Droppable>
+          ))}
+        </Styled.WrapperColumns>
+      </DragDropContext>
     </Styled.Container>
   );
 };

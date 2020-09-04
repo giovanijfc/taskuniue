@@ -5,16 +5,18 @@ import { Line } from 'rc-progress';
 import COLORS from 'styles/guides/colors';
 import SPACING from 'styles/guides/spacing';
 
-export const Container = styled.div`
+export const Container = styled.div<{ isDragging?: boolean }>`
   display: flex;
   flex-direction: column;
   padding-bottom: ${SPACING.high};
   border-bottom: solid ${COLORS.gray100} 1px;
-  cursor: pointer;
+  user-select: none;
   transition: transform 0.2s;
+  background: ${({ isDragging }) =>
+    isDragging ? COLORS.background : COLORS.white}
 
   &:hover {
-    transform: scale(1.15);
+    transform: scale(1.1);
     background-color: ${COLORS.background};
     padding: ${SPACING.default};
     box-shadow: 6px 6px 6px 2px ${COLORS.gray300};
@@ -29,4 +31,5 @@ export const ProgressLine = styled(Line).attrs({
 })`
   width: 60%;
   margin-top: 8px;
+  user-select: none;
 `;
