@@ -3,11 +3,10 @@ import { useHistory, useLocation } from 'react-router-dom';
 
 import COLORS from 'styles/guides/colors';
 
-import { SideBarType } from 'hooks/useSidebar';
-
 import * as Styled from './styles';
 
 import SIDEBAR_OPTIONS from './SIDEBAR_OPTIONS';
+import { SideBarType } from 'hooks/useSidebar';
 
 const Sidebar: React.FC<SideBarType> = sidebar => {
   const history = useHistory();
