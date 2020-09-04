@@ -7,10 +7,14 @@ import {
 } from 'react-router-dom';
 
 import FallbackLoading from 'components/templates/FallbackLoading/FallbackLoading';
+import KanbanScreen from 'screens/KanbanScreen/KanbanScreen';
 
 const LoginScreen = React.lazy(() => import('screens/LoginScreen/LoginScreen'));
-const KanbanScreen = React.lazy(() =>
-  import('screens/KanbanScreen/KanbanScreen')
+const ForgotPassword = React.lazy(() =>
+  import('screens/ForgotPassword/ForgotPassword')
+);
+const CreateAccount = React.lazy(() =>
+  import('screens/CreateAccount/CreateAccount')
 );
 const HeaderSideRoute = React.lazy(() =>
   import('components/atoms/HeaderSideRoute/HeaderSideRoute')
@@ -21,6 +25,8 @@ const Routes = () => (
     <Router>
       <Switch>
         <Route exact path='/login' component={LoginScreen} />
+        <Route exact path='/forgotpassword' component={ForgotPassword} />
+        <Route exact path='/createaccount' component={CreateAccount} />
 
         <HeaderSideRoute exact path='/kanban' component={KanbanScreen} />
         <HeaderSideRoute exact path='/notifications' component={KanbanScreen} />

@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-import Text from 'components/atoms/Text/Text';
-
 import COLORS from 'styles/guides/colors';
 import SPACING from 'styles/guides/spacing';
+import Text from 'components/atoms/Text/Text';
 
 export const Container = styled.div<{ isOpen: boolean }>`
   width: ${({ isOpen }) => (isOpen ? '250px' : '0px')};

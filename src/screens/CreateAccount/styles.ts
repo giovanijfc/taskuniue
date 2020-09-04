@@ -19,10 +19,6 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
 
-  label {
-    text-align: center;
-  }
-
   a {
     line-break: keep-all;
     font-weight: bold;
@@ -100,7 +96,7 @@ export const Button = styled.button`
 `;
 
 export const Span = styled.span`
-  margin-left: 110px;
+  margin-left: 135px;
 
   :hover {
     cursor: pointer;
