@@ -6,11 +6,11 @@ import Text from 'components/atoms/Text/Text';
 
 import * as Styled from './styles';
 
-const Column = ({ item }) => {
-  const { title } = item;
+const Column = ({ data, index, children, draggingOver }) => {
+  const { title } = data;
 
   return (
-    <Styled.Container index={item.index}>
+    <Styled.Container draggingOver={draggingOver} index={index}>
       <Styled.WrapperHeader>
         <Text size='medium' fontWeight='semiBold'>
           {title}
@@ -18,8 +18,7 @@ const Column = ({ item }) => {
 
         <Styled.IconMoreOptions />
       </Styled.WrapperHeader>
-
-      <Task />
+      {children}
     </Styled.Container>
   );
 };

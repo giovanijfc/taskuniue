@@ -5,13 +5,21 @@ import SPACING from 'styles/guides/spacing';
 
 import { IoIosMore } from 'react-icons/io';
 
-export const Container = styled.div<{ index: number }>`
-  min-width: 18%;
+export const Container = styled.div<{
+  index: number;
+  draggingOver?: boolean | false;
+}>`
+  width: 320px;
+  min-width: 220px;
+  height: 90%;
   background: ${COLORS.white};
   border-radius: 8px;
   margin-left: ${({ index }) => (index > 0 ? SPACING.small : '0px')};
   padding: ${SPACING.small} ${SPACING.default} ${SPACING.small}
     ${SPACING.default};
+  border: ${({ draggingOver }) =>
+    draggingOver ? `2px solid ${COLORS.primary}` : ''};
+  overflow-y: auto;
 `;
 
 export const WrapperHeader = styled.div`

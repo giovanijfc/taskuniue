@@ -7,11 +7,11 @@ import SPACING from 'styles/guides/spacing';
 
 import * as Styled from './styles';
 
-const Task = () => {
+const Task = ({ data, isDragging }) => {
   return (
-    <Styled.Container>
+    <Styled.Container isDragging={isDragging}>
       <Text size='extraRegular' fontWeight='semiBold'>
-        Research
+        {data.title}
       </Text>
 
       <Text
@@ -28,7 +28,7 @@ const Task = () => {
         size='small'
         fontWeight='semiBold'
       >
-        I need 5 examples of the logo
+        {data.description}
       </Text>
 
       <Text
@@ -41,14 +41,14 @@ const Task = () => {
       </Text>
 
       <div>
-        <Styled.ProgressLine percent={0} />
+        <Styled.ProgressLine percent={data.progress} />
         <Text
           style={{ letterSpacing: '1px', marginLeft: SPACING.default }}
           size='small'
           fontWeight='bold'
           color={COLORS.gray400}
         >
-          0%
+          {data.progress} %
         </Text>
       </div>
     </Styled.Container>
