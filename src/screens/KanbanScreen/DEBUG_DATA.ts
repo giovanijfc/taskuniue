@@ -1,4 +1,4 @@
-export const BOARDS = [
+export const COLUMNS = [
   {
     id: 1,
     title: 'Backlog',
@@ -6,6 +6,13 @@ export const BOARDS = [
       {
         id: 1,
         title: 'Teste 1',
+        description: 'Teste 1',
+        progress: 79,
+        users: []
+      },
+      {
+        id: 4,
+        title: 'Teste 4',
         description: 'Teste 1',
         progress: 79,
         users: []

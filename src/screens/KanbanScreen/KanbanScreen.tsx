@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 import Column from 'components/molecules/Column/Column';
@@ -7,16 +7,22 @@ import Task from 'components/molecules/Task/Task';
 import Text from 'components/atoms/Text/Text';
 import Button from 'components/atoms/Button/Button';
 
+import useKanban from 'hooks/useKanban';
+
 import COLORS from 'styles/guides/colors';
 import SPACING from 'styles/guides/spacing';
 
 import * as Styled from './styles';
 
-import { BOARDS as columns } from './DEBUG_DATA';
+import { COLUMNS } from './DEBUG_DATA';
 
 import { IoIosAdd } from 'react-icons/io';
 
 const KanbanScreen = () => {
+  const [columns, setColumns] = useState(COLUMNS);
+
+  const { onDragEnd } = useKanban(columns, setColumns);
+
   return (
     <Styled.Container>
       <Styled.WrapperHeader>
@@ -42,7 +48,7 @@ const KanbanScreen = () => {
         </Styled.WrapperButtonAddTask>
       </Styled.WrapperHeader>
 
-      <DragDropContext onDragEnd={result => console.log(result)}>
+      <DragDropContext onDragEnd={onDragEnd}>
         <Styled.WrapperColumns>
           {columns.map((column, index) => (
             <Droppable droppableId={JSON.stringify(column.id)}>

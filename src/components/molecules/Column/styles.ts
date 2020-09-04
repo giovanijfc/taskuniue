@@ -17,7 +17,7 @@ export const Container = styled.div<{
   margin-left: ${({ index }) => (index > 0 ? SPACING.small : '0px')};
   padding: ${SPACING.small} ${SPACING.default} ${SPACING.small}
     ${SPACING.default};
-  background: ${({ draggingOver }) =>
+  border: ${({ draggingOver }) =>
     draggingOver ? `2px solid ${COLORS.primary}` : ''};
   overflow-y: auto;
 `;
