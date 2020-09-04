@@ -12,8 +12,8 @@ export const Container = styled.div<{ isDragging?: boolean }>`
   border-bottom: solid ${COLORS.gray100} 1px;
   user-select: none;
   transition: transform 0.2s;
-  background: ${({ isDragging }) =>
-    isDragging ? COLORS.background : COLORS.white}
+  border: ${({ isDragging }) =>
+    isDragging ? `2px solid ${COLORS.backgroundHeavy}` : ''};
 
   &:hover {
     transform: scale(1.1);
