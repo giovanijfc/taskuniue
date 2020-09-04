@@ -14,7 +14,7 @@ export const Container = styled.div`
   transition: transform 0.2s;
 
   &:hover {
-    transform: scale(1.3);
+    transform: scale(1.15);
     background-color: ${COLORS.background};
     padding: ${SPACING.default};
     box-shadow: 6px 6px 6px 2px ${COLORS.gray300};

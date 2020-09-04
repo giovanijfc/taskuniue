@@ -6,11 +6,11 @@ import Text from 'components/atoms/Text/Text';
 
 import * as Styled from './styles';
 
-const Column = ({ item }) => {
-  const { title } = item;
+const Column = ({ data, index }) => {
+  const { title, tasks } = data;
 
   return (
-    <Styled.Container index={item.index}>
+    <Styled.Container index={index}>
       <Styled.WrapperHeader>
         <Text size='medium' fontWeight='semiBold'>
           {title}
@@ -18,8 +18,9 @@ const Column = ({ item }) => {
 
         <Styled.IconMoreOptions />
       </Styled.WrapperHeader>
-
-      <Task />
+      {tasks.map(task => (
+        <Task data={task} />
+      ))}
     </Styled.Container>
   );
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Column from 'components/molecules/Column/Column';
+import Task from 'components/molecules/Task/Task';
 
 import Text from 'components/atoms/Text/Text';
 import Button from 'components/atoms/Button/Button';
@@ -10,7 +11,7 @@ import SPACING from 'styles/guides/spacing';
 
 import * as Styled from './styles';
 
-import { BOARDS } from './DEBUG_DATA';
+import { BOARDS as columns } from './DEBUG_DATA';
 
 import { IoIosAdd } from 'react-icons/io';
 
@@ -41,8 +42,8 @@ const KanbanScreen = () => {
       </Styled.WrapperHeader>
 
       <Styled.WrapperColumns>
-        {BOARDS.map((column, index) => (
-          <Column item={{ ...column, index }} />
+        {columns.map((column, index) => (
+          <Column data={column} index={index} />
         ))}
       </Styled.WrapperColumns>
     </Styled.Container>
