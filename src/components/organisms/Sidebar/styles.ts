@@ -5,12 +5,25 @@ import SPACING from 'styles/guides/spacing';
 import Text from 'components/atoms/Text/Text';
 
 export const Container = styled.div<{ isOpen: boolean }>`
-  width: ${({ isOpen }) => (isOpen ? '250px' : '0px')};
   display: flex;
   flex-direction: column;
-  padding-top: 85px;
+  padding-top: 80px;
   background-color: ${COLORS.white};
   transition: all 0.5s;
+
+  ${({ isOpen }) => {
+    if (isOpen) {
+      return {
+        width: '280px',
+        'min-width': '230px'
+      };
+    } else {
+      return {
+        width: '0px',
+        'min-width': '0px'
+      };
+    }
+  }};
 `;
 
 export const WrapperItemSidebar = styled.div<{ selected: boolean }>`

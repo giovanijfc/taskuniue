@@ -5,7 +5,7 @@ import Column from 'components/molecules/Column/Column';
 import Task from 'components/molecules/Task/Task';
 
 import Text from 'components/atoms/Text/Text';
-import Button from 'components/atoms/Button/Button';
+import LabelButton from 'components/atoms/LabelButton/LabelButton';
 
 import useKanban from 'hooks/useKanban';
 
@@ -30,22 +30,24 @@ const KanbanScreen = () => {
           Kanban
         </Text>
 
-        <Styled.WrapperButtonAddTask>
-          <Text
-            style={{ marginRight: SPACING.high }}
-            fontWeight='medium'
-            size='regular'
-            color={COLORS.gray600}
-          >
-            Criar tarefa
-          </Text>
-          <Button
+        <Styled.WrapperButtonsOptions>
+          <LabelButton
+            style={{ marginRight: SPACING.default }}
             hoverBackgroundColor={COLORS.primaryHover}
             backgroundColor={COLORS.primary}
+            label='Adicionar coluna'
           >
             <IoIosAdd size='32px' color={COLORS.white} />
-          </Button>
-        </Styled.WrapperButtonAddTask>
+          </LabelButton>
+
+          <LabelButton
+            hoverBackgroundColor={COLORS.primaryHover}
+            backgroundColor={COLORS.primary}
+            label='Adicionar tarefa'
+          >
+            <IoIosAdd size='32px' color={COLORS.white} />
+          </LabelButton>
+        </Styled.WrapperButtonsOptions>
       </Styled.WrapperHeader>
 
       <DragDropContext onDragEnd={onDragEnd}>
