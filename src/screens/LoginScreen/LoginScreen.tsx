@@ -34,7 +34,7 @@ const LoginScreen = () => {
             .signInWithEmailAndPassword(email, password)
             .then(() => {
               setLoading(false);
-              history.replace('/tasks');
+              history.replace('/kanban');
             })
             .catch(function (error) {
               setLoading(false);
