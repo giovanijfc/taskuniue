@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MiniProfile from 'components/molecules/MiniProfile/MiniProfile';
+
 import Input from 'components/atoms/Input/Input';
 
 import { SideBarType } from 'hooks/useSidebar';
@@ -8,6 +10,8 @@ import COLORS from 'styles/guides/colors';
 import SPACING from 'styles/guides/spacing';
 
 import * as Styled from './styles';
+
+import DROPDOWN_OPTIONS_PROFILE from './DROPDOWN_OPTIONS_PROFILE';
 
 import { BiSearch } from 'react-icons/bi';
 
@@ -28,21 +32,28 @@ const Header: React.FC<SideBarType> = sidebar => {
         <Styled.StyledTextMenu>Menu</Styled.StyledTextMenu>
       </Styled.WrapperOptionMenu>
 
-      <Input
-        placeholder='Pesquise por...'
-        fontSize='regular'
-        fontWeight='regular'
-        color={COLORS.gray800}
-        placeholderColor={COLORS.gray500}
-        IconLeft={
-          <BiSearch
-            style={{ paddingRight: SPACING.nano }}
-            size='28px'
-            color={COLORS.gray400}
-          />
-        }
-        style={{ width: '28%', height: '30%' }}
-      />
+      <Styled.WrapperAround>
+        <Input
+          placeholder='Pesquise por...'
+          fontSize='regular'
+          fontWeight='regular'
+          color={COLORS.gray800}
+          placeholderColor={COLORS.gray500}
+          IconLeft={
+            <BiSearch
+              style={{ paddingRight: SPACING.nano }}
+              size='28px'
+              color={COLORS.gray400}
+            />
+          }
+          style={{ width: '28%', height: '36px' }}
+        />
+
+        <MiniProfile
+          options={DROPDOWN_OPTIONS_PROFILE}
+          style={{ height: '60px', alignSelf: 'center' }}
+        />
+      </Styled.WrapperAround>
     </Styled.Container>
   );
 };

@@ -9,7 +9,6 @@ export const Container = styled.div`
   justify-content: center;
   position: absolute;
   padding: ${SPACING.small};
-  margin-top: -10px;
   margin-left: 8px;
   background: ${COLORS.gray700};
   border-radius: 8px;

@@ -22,12 +22,22 @@ export const WrapperOptionMenu = styled.div`
   display: flex;
   align-items: center;
   padding-left: 44px;
-  margin-right: 150px;
   transition: all 0.3s;
 
   &:hover {
     transform: scale(1.1);
   }
+`;
+
+export const WrapperAround = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: 0 ${SPACING.huge} 0 7.5%;
+  justify-content: space-between;
+  border: 0;
+  outline: 0;
 `;
 
 export const StyledTextMenu = styled(Text).attrs({

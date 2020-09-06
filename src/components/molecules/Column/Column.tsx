@@ -26,6 +26,7 @@ const Column = ({ data, index, children, draggingOver }) => {
           </DropdownTrigger>
 
           <DropdownActionsOptions
+            style={{ marginTop: '-10px' }}
             handleClick={id => console.log(id)}
             options={DROPDOWN_OPTIONS}
           />
