@@ -10,7 +10,7 @@ import * as Styled from './styles';
 const Task = ({ data, isDragging }) => {
   return (
     <Styled.Container isDragging={isDragging}>
-      <Text size='extraRegular' fontWeight='semiBold'>
+      <Text fontSize='extraRegular' fontWeight='semiBold'>
         {data.title}
       </Text>
 
@@ -25,7 +25,7 @@ const Task = ({ data, isDragging }) => {
           lineHeight: '1.4em'
         }}
         color={COLORS.gray400}
-        size='small'
+        fontSize='small'
         fontWeight='semiBold'
       >
         {data.description}
@@ -33,7 +33,7 @@ const Task = ({ data, isDragging }) => {
 
       <Text
         style={{ letterSpacing: '1px', marginTop: SPACING.small }}
-        size='extraSmall'
+        fontSize='extraSmall'
         fontWeight='bold'
         color={COLORS.gray300}
       >
@@ -44,7 +44,7 @@ const Task = ({ data, isDragging }) => {
         <Styled.ProgressLine percent={data.progress} />
         <Text
           style={{ letterSpacing: '1px', marginLeft: SPACING.default }}
-          size='small'
+          fontSize='small'
           fontWeight='bold'
           color={COLORS.gray400}
         >

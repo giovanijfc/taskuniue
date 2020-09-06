@@ -38,7 +38,7 @@ const DropdownActionsOptions: FC<Props> = ({ options, handleClick }) => {
           {Icon && <Icon size='20px' color={COLORS.white} />}
           <Text
             style={{ marginLeft: SPACING.nano }}
-            size='regular'
+            fontSize='regular'
             fontWeight='medium'
             color={COLORS.white}
           >

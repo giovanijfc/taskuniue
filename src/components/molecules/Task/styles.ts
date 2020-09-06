@@ -41,7 +41,7 @@ export const ProgressLine = styled(Line).attrs({
 
 const cardHoverAndDraggingStyle = {
   transform: 'scale(1.1)',
-  'background-color': COLORS.background,
+  'background-color': COLORS.backgroundLight,
   padding: SPACING.default,
   'box-shadow': `6px 6px 6px 2px ${COLORS.gray300}`
 };

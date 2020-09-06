@@ -9,7 +9,7 @@ export const Container = styled.div<{ isOpen: boolean }>`
   flex-direction: column;
   padding-top: 80px;
   background-color: ${COLORS.white};
-  transition: all 0.5s;
+  transition: all 0.2s;
 
   ${({ isOpen }) => {
     if (isOpen) {
@@ -36,6 +36,14 @@ export const WrapperItemSidebar = styled.div<{ selected: boolean }>`
   background-color: ${({ selected }) =>
     selected ? COLORS.primary : COLORS.white};
   cursor: pointer;
+
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    background: ${({ selected }) =>
+      selected ? COLORS.primary : COLORS.backgroundLight};
+  }
 `;
 
 export const WrapperIcon = styled.div`

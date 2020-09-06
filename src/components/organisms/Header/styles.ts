@@ -22,11 +22,17 @@ export const WrapperOptionMenu = styled.div`
   display: flex;
   align-items: center;
   padding-left: 44px;
+  margin-right: 150px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 export const StyledTextMenu = styled(Text).attrs({
   fontWeight: 'regular',
-  size: 'regular',
+  fontSize: 'regular',
   color: COLORS.gray600
 })`
   margin-left: ${SPACING.high};
