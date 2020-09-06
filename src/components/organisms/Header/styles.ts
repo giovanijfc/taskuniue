@@ -40,6 +40,10 @@ export const WrapperAround = styled.div`
   outline: 0;
 `;
 
+export const WrapperProfiles = styled.div`
+  display: flex;
+`;
+
 export const StyledTextMenu = styled(Text).attrs({
   fontWeight: 'regular',
   fontSize: 'regular',

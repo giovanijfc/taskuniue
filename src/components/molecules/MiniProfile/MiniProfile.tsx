@@ -15,21 +15,35 @@ import * as Styled from './styles';
 interface Props {
   style?: React.CSSProperties | undefined;
   options?: Array<OptionsDropdownActionsType> | undefined;
+  srcImage?: string | undefined;
+  name: string;
+  email?: string | undefined;
 }
 
-const profileMockedImage =
-  'https://scontent.fcnf2-1.fna.fbcdn.net/v/t1.0-9/69070223_2313363825427410_1072069939260555264_n.jpg?_nc_cat=106&_nc_sid=09cbfe&_nc_ohc=Amvyg9YhesMAX_HYDOk&_nc_ht=scontent.fcnf2-1.fna&oh=c1dc7de74378fb8be48445c7906acc0c&oe=5F7A2409';
-
-const MiniProfile: React.FC<Props> = ({ options, ...propsContainer }) => {
+const MiniProfile: React.FC<Props> = ({
+  options,
+  email,
+  name,
+  srcImage,
+  ...propsContainer
+}) => {
   return (
     <DropdownActions>
       <DropdownTrigger>
         <Styled.Container {...propsContainer}>
-          <Styled.ImageProfile src={profileMockedImage} />
+          {srcImage ? (
+            <Styled.ImageProfile src={srcImage} />
+          ) : (
+            <Styled.WrapperLetterProfileImage>
+              <Text fontSize='medium' fontWeight='regular' color={COLORS.white}>
+                {name[0]}
+              </Text>
+            </Styled.WrapperLetterProfileImage>
+          )}
 
           <Styled.WrapperInfo>
             <Text fontWeight='bold' fontSize='regular' color={COLORS.gray700}>
-              Giovani Fonseca
+              {name}
             </Text>
 
             <Text
@@ -37,7 +51,7 @@ const MiniProfile: React.FC<Props> = ({ options, ...propsContainer }) => {
               fontWeight='bold'
               color={COLORS.gray400}
             >
-              giovanijfc@gmail.com
+              {email}
             </Text>
           </Styled.WrapperInfo>
         </Styled.Container>

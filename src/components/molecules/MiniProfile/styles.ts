@@ -30,3 +30,15 @@ export const WrapperInfo = styled.div`
   flex-direction: column;
   margin-left: 10px;
 `;
+
+export const WrapperLetterProfileImage = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 100%;
+  background: ${COLORS.tertiary};
+  border: 0;
+  outline: 0;
+  border-radius: 12px;
+`;
