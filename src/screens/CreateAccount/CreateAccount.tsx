@@ -32,7 +32,12 @@ const CreateAccount = () => {
           firebase
             .auth()
             .createUserWithEmailAndPassword(email, password)
+            .then(() => {
+              setLoading(false);
+              history.replace('/Login');
+            })
             .catch(function (error) {
+              setLoading(false);
               var errorCode = error.code;
               alert(errorCode);
             });
