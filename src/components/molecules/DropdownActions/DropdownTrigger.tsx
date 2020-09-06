@@ -10,7 +10,7 @@ interface Props {
 
 const DropdownTrigger: FC<Props> = ({ children }) => (
   <DropdownContext.Consumer>
-    {({ setIsOpen }) => (
+    {({ setIsOpen, isOpen }) => (
       <Styled.Container
         onClick={() => setIsOpen && setIsOpen(prevIsOpen => !prevIsOpen)}
       >
