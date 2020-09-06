@@ -9,9 +9,9 @@ export const Container = styled.div<{
   index: number;
   draggingOver?: boolean | false;
 }>`
-  width: 320px;
-  min-width: 220px;
-  height: 90%;
+  width: 310px;
+  min-width: 150px;
+  height: 95%;
   background: ${COLORS.white};
   border-radius: 8px;
   margin-left: ${({ index }) => (index > 0 ? SPACING.small : '0px')};
@@ -33,12 +33,5 @@ export const IconMoreOptions = styled(IoIosMore).attrs({
   size: '24px'
 })`
   cursor: pointer;
-  color: ${COLORS.gray500};
-  transition: all 0.5s;
-
-  &:hover {
-    color: ${COLORS.gray900};
-    height: 30px;
-    width: 30px;
-  }
+  color: ${COLORS.gray800};
 `;

@@ -10,9 +10,11 @@ export const Container = styled.div<Props>`
   border-radius: 20px;
   cursor: pointer;
   background-color: ${({ backgroundColor }) => backgroundColor || 'white'};
+  transition: all 0.3s;
 
   &:hover {
     background-color: ${({ hoverBackgroundColor }) =>
       hoverBackgroundColor || '#CDC'};
+    transform: scale(1.1);
   }
 `;

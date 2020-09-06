@@ -1,10 +1,14 @@
 import React from 'react';
 
-import Task from 'components/molecules/Task/Task';
+import DropdownActions from 'components/molecules/DropdownActions/DropdownActions';
+import DropdownTrigger from 'components/molecules/DropdownActions/DropdownTrigger';
+import DropdownActionsOptions from 'components/molecules/DropdownActions/DropdownActionsOptions';
 
 import Text from 'components/atoms/Text/Text';
 
 import * as Styled from './styles';
+
+import DROPDOWN_OPTIONS from './DROPDOWN_OPTIONS';
 
 const Column = ({ data, index, children, draggingOver }) => {
   const { title } = data;
@@ -16,7 +20,16 @@ const Column = ({ data, index, children, draggingOver }) => {
           {title}
         </Text>
 
-        <Styled.IconMoreOptions />
+        <DropdownActions>
+          <DropdownTrigger>
+            <Styled.IconMoreOptions />
+          </DropdownTrigger>
+
+          <DropdownActionsOptions
+            handleClick={id => console.log(id)}
+            options={DROPDOWN_OPTIONS}
+          />
+        </DropdownActions>
       </Styled.WrapperHeader>
       {children}
     </Styled.Container>

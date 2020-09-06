@@ -19,14 +19,11 @@ export const WrapperHeader = styled.div`
   padding-left: ${SPACING.default};
 `;
 
-export const WrapperButtonAddTask = styled.div`
+export const WrapperButtonsOptions = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
-  padding: ${SPACING.small};
-  background: ${COLORS.white};
-  border-radius: 8px;
+  align-self: flex-end;
 `;
 
 export const WrapperColumns = styled.div`
