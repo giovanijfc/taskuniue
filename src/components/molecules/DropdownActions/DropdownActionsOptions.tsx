@@ -1,10 +1,4 @@
-import React, {
-  FC,
-  createRef,
-  useEffect,
-  useContext,
-  useCallback
-} from 'react';
+import React, { FC, useContext } from 'react';
 import { IconType } from 'react-icons/lib';
 
 import { DropdownContext } from 'contexts/DropdownContext';
@@ -31,34 +25,14 @@ interface Props {
 export type OptionsDropdownActionsType = Options;
 
 const DropdownActionsOptions: FC<Props> = ({ options, handleClick }) => {
-  const wrapperRef = createRef<HTMLDivElement>();
-  const { isOpen, setIsOpen } = useContext(DropdownContext);
-
-  const handleClickOutside = useCallback(
-    event => {
-      if (wrapperRef && !wrapperRef?.current?.contains(event.target)) {
-        if (isOpen) {
-          setIsOpen?.(false);
-        }
-      }
-    },
-    [isOpen, setIsOpen, wrapperRef]
-  );
-
-  useEffect(() => {
-    document.addEventListener('mousedown', handleClickOutside);
-
-    return () => {
-      document.removeEventListener('mousedown', handleClickOutside);
-    };
-  }, [handleClickOutside, isOpen]);
+  const { isOpen } = useContext(DropdownContext);
 
   const onClickHandler = (id: string | number) => {
     handleClick(id);
   };
 
   return isOpen ? (
-    <Styled.Container ref={wrapperRef}>
+    <Styled.Container>
       {options.map(({ id, label, Icon }) => (
         <Styled.WrapperRow onClick={() => onClickHandler(id)}>
           {Icon && <Icon size='20px' color={COLORS.white} />}
