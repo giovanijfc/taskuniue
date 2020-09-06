@@ -22,11 +22,31 @@ export const WrapperOptionMenu = styled.div`
   display: flex;
   align-items: center;
   padding-left: 44px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+`;
+
+export const WrapperAround = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  margin: 0 ${SPACING.huge} 0 7.5%;
+  justify-content: space-between;
+  border: 0;
+  outline: 0;
+`;
+
+export const WrapperProfiles = styled.div`
+  display: flex;
 `;
 
 export const StyledTextMenu = styled(Text).attrs({
   fontWeight: 'regular',
-  size: 'regular',
+  fontSize: 'regular',
   color: COLORS.gray600
 })`
   margin-left: ${SPACING.high};

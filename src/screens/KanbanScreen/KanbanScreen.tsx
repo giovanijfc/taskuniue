@@ -26,7 +26,7 @@ const KanbanScreen = () => {
   return (
     <Styled.Container>
       <Styled.WrapperHeader>
-        <Text fontWeight='bold' size='extraHigh'>
+        <Text fontWeight='bold' fontSize='extraHigh'>
           Kanban
         </Text>
 

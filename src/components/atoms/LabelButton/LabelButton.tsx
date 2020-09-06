@@ -29,7 +29,7 @@ const LabelButton: React.FC<Props> = ({
     <Text
       style={{ marginRight: SPACING.high }}
       fontWeight='medium'
-      size='regular'
+      fontSize='regular'
       color={COLORS.gray600}
     >
       {label}

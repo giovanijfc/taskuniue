@@ -1,6 +1,6 @@
 interface CustomFontGuideTypes {
   fontWeight?: 'light' | 'regular' | 'medium' | 'semiBold' | 'bold' | undefined;
-  size?:
+  fontSize?:
     | 'small'
     | 'extraSmall'
     | 'regular'
@@ -15,8 +15,8 @@ interface CustomFontGuideTypes {
 
 export type FontGuideTypes = CustomFontGuideTypes;
 
-export const getFontSize = (size: FontGuideTypes['size']): string => {
-  switch (size) {
+export const getFontSize = (fontSize: FontGuideTypes['fontSize']): string => {
+  switch (fontSize) {
     case 'small':
       return '0.9em';
     case 'extraSmall':

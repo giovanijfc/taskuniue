@@ -20,11 +20,16 @@ interface Options {
 interface Props {
   options: Array<Options>;
   handleClick(id: string | number): any;
+  style?: React.CSSProperties | undefined;
 }
 
 export type OptionsDropdownActionsType = Options;
 
-const DropdownActionsOptions: FC<Props> = ({ options, handleClick }) => {
+const DropdownActionsOptions: FC<Props> = ({
+  options,
+  handleClick,
+  ...propsContainer
+}) => {
   const { isOpen } = useContext(DropdownContext);
 
   const onClickHandler = (id: string | number) => {
@@ -32,13 +37,13 @@ const DropdownActionsOptions: FC<Props> = ({ options, handleClick }) => {
   };
 
   return isOpen ? (
-    <Styled.Container>
+    <Styled.Container {...propsContainer}>
       {options.map(({ id, label, Icon }) => (
         <Styled.WrapperRow onClick={() => onClickHandler(id)}>
           {Icon && <Icon size='20px' color={COLORS.white} />}
           <Text
             style={{ marginLeft: SPACING.nano }}
-            size='regular'
+            fontSize='regular'
             fontWeight='medium'
             color={COLORS.white}
           >

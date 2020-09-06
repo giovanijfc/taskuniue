@@ -38,7 +38,7 @@ const Sidebar: React.FC<SideBarType> = sidebar => {
           <Styled.TextItem
             fontWeight='bold'
             color={selected ? COLORS.white : COLORS.gray500}
-            size={selected ? 'regular' : 'small'}
+            fontSize={selected ? 'regular' : 'small'}
           >
             {text}
           </Styled.TextItem>

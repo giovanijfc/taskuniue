@@ -16,7 +16,7 @@ const Column = ({ data, index, children, draggingOver }) => {
   return (
     <Styled.Container draggingOver={draggingOver} index={index}>
       <Styled.WrapperHeader>
-        <Text size='medium' fontWeight='semiBold'>
+        <Text fontSize='medium' fontWeight='semiBold'>
           {title}
         </Text>
 
@@ -26,6 +26,7 @@ const Column = ({ data, index, children, draggingOver }) => {
           </DropdownTrigger>
 
           <DropdownActionsOptions
+            style={{ marginTop: '-10px' }}
             handleClick={id => console.log(id)}
             options={DROPDOWN_OPTIONS}
           />
